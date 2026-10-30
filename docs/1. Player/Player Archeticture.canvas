@@ -1,0 +1,22 @@
+{
+	"nodes":[
+		{"id":"de6aba6111274848","type":"text","text":"<p style=\"text-align: center;\">Player</p>","x":-200,"y":-420,"width":240,"height":60,"color":"#fa00b7"},
+		{"id":"fc80cfd1b8e52c2f","type":"text","text":"<p style=\"text-align: center;\">Parameters</p>","x":-390,"y":-300,"width":250,"height":60,"color":"#fa00b7"},
+		{"id":"2599ec5a977e7c32","type":"text","text":"<p style=\"text-align: center;\">IsLost</p>","x":-390,"y":-40,"width":250,"height":60,"color":"#fa00b7"},
+		{"id":"0f08409d67cc902c","type":"text","text":"<p style=\"text-align: center;\">Methods</p>","x":-20,"y":-300,"width":250,"height":60,"color":"#fa00b7"},
+		{"id":"ec8641ae81373c9c","type":"text","text":"<p style=\"text-align: center;\">takeCardsDeck</p>","x":-20,"y":-40,"width":250,"height":60,"color":"#fa00b7"},
+		{"id":"328550b8de45cca8","type":"text","text":"<p style=\"text-align: center;\">cadsCheck</p>","x":-160,"y":-140,"width":250,"height":60,"color":"#fa00b7"},
+		{"id":"4edfea872d580e3b","type":"text","text":"<p style=\"text-align: center;\">takeCardsTable</p>","x":120,"y":-140,"width":250,"height":60,"color":"#fa00b7"},
+		{"id":"5894781ec8ef23bf","type":"text","text":"<p style=\"text-align: center;\">Inventory</p>","x":-540,"y":-140,"width":250,"height":60,"color":"#fa00b7"}
+	],
+	"edges":[
+		{"id":"5b2aecec782075cf","fromNode":"de6aba6111274848","fromSide":"bottom","toNode":"fc80cfd1b8e52c2f","toSide":"top"},
+		{"id":"51394869342d684e","fromNode":"de6aba6111274848","fromSide":"bottom","toNode":"fc80cfd1b8e52c2f","toSide":"top"},
+		{"id":"62865a3a6d3e6aef","fromNode":"fc80cfd1b8e52c2f","fromSide":"bottom","toNode":"2599ec5a977e7c32","toSide":"top"},
+		{"id":"e3cdf7785ae6e783","fromNode":"de6aba6111274848","fromSide":"bottom","toNode":"0f08409d67cc902c","toSide":"top"},
+		{"id":"df93f259421f9d4b","fromNode":"0f08409d67cc902c","fromSide":"bottom","toNode":"4edfea872d580e3b","toSide":"top"},
+		{"id":"25c60a2625cac852","fromNode":"0f08409d67cc902c","fromSide":"bottom","toNode":"ec8641ae81373c9c","toSide":"top"},
+		{"id":"200af64b5ddedcf6","fromNode":"0f08409d67cc902c","fromSide":"bottom","toNode":"328550b8de45cca8","toSide":"top"},
+		{"id":"4f43013db487e69d","fromNode":"fc80cfd1b8e52c2f","fromSide":"bottom","toNode":"5894781ec8ef23bf","toSide":"top"}
+	]
+}
