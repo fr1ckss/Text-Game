@@ -7,3 +7,8 @@ for i in range(6, 15):
 table = []
 
 player = Player()
+
+
+while player.isLost == False:
+    print(f"Twoji karty: {player.inventory.checkCards()}")
+    
