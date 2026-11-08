@@ -3,8 +3,11 @@ from classes.player import Player
 from classes.table import Table
 
 deck = []
+
 for i in range(6, 15):
-    deck.extend([i]*4)
+    deck.extend([i] * 4)
+
+random.shuffle(deck)
 
 random.shuffle(deck)
 
@@ -108,6 +111,12 @@ def round():
             player_defend()
     
 
+player = Player()
+enemy = Player()
+
+for i in range(6):
+    player.takeCardsDeck()
+    enemy.takeCardsDeck(deck)
 
     # for card in table:
     #     table.info()
