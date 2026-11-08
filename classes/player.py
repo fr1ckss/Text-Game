@@ -1,20 +1,22 @@
 from classes.inventory import Inventory
-from main import table, deck
 
 class Player:
-    def __init__(self):
-        self.inventory = Inventory()
+    def __init__(self, table, deck):
+        self.table = table
+        self.deck = deck
+        self.inventory = Inventory(self.table, self.deck)
         self.isLost = False
+        self.wins_round = 0
 
     def takeCardsDeck(self):
-        return self.inventory.takeCardsDeck(deck)
+        self.inventory.takeCardsDeck()
      
     def takeCardTable(self):
-        return self.inventory.takeCardTable(table)
+        self.inventory.takeCardTable()
     
     def cardsCheck(self):
-        return self.inventory.cardsCheck()
+        self.inventory.cardsCheck()
     
     def throwCard(self, card):
-        return self.inventory.throwCard(card, table)
+        return self.inventory.throwCard(card)
      

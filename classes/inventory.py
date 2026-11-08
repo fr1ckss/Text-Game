@@ -1,35 +1,39 @@
-class inventory:
-    def __init__(self):
+class Inventory:
+    def __init__(self, table, deck):
         self.cards = []
         self.maxCard = 6
+        self.deck = deck
+        self.table = table
 
-    def takeCardsDeck(self, deck):
-        if len(self.cards) < self.maxCard:
-            card = deck.pop()
-            self.cards.append(card)
-            return card
+    def takeCardsDeck(self):
+        if len(self.cards) < self.maxCard and self.deck != []:
+            for i in range(self.maxCard - len(self.cards)):
+                card = self.deck.pop(i)
+                self.cards.append(card)
+            return True
         else:
-            print("Nie mozesz wziac wiecej kart")
             return None
     
-    def takeCardTable(self, table):
-        if table != []:
-            card = table.pop()
-            self.cards.append(card)
-            return card
+    def takeCardTable(self):
+        if self.table != []:
+            for i in range(len(self.table.cards)):
+                card = self.table.cards.pop(i)
+                self.cards.append(card)
         else:
-            print("Nie ma wiecej kart na stole")
             return None
     
-    def throwCard(self, card, table):
+    def throwCard(self, card):
         if card in self.cards:
             self.cards.remove(card)
-            table.append(card)
+            self.table.addCard(card)
             return card
         else:
-            print("Nie masz takiej karty")
             return None
 
     def cardsCheck(self):
-        for i, card in enumerate(self.cards):
-            print(f"{i+1}: {card}")
+        if self.cards == []:
+            return False
+        else:
+            for i, card in enumerate(self.cards):
+                print(f"{i+1}: {card}")
+            return True
